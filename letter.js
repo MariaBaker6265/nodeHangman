@@ -46,10 +46,8 @@ var gameSongTest = ["hey jude", "satisfaction", "darion", "lou", "greg", "jordan
 
 // Solution is chosen randomly from songList.
     chosenSong = gameSongTest[Math.floor(Math.random() * gameSongTest.length)];
-
 // The song is broken into individual letters and spaces.
     lettersInChosenSong = chosenSong.split("");
-
 // We count the number of letters in the word.
     numBlanks = lettersInChosenSong.length;
 
@@ -58,28 +56,26 @@ var gameSongTest = ["hey jude", "satisfaction", "darion", "lou", "greg", "jordan
 
 
 // CRITICAL LINE - Here we *reset* the guess and success array at each round.
-    blanksAndSuccesses = [];
+blanksAndSuccesses = [];
 // CRITICAL LINE - Here we *reset* the wrong guesses from the previous round.
-    wrongGuesses = [];
+wrongGuesses = [];
 
 //Initially fill blanksAndSuccesses with blanks based on number of letters in solution.
-    for (var i = 0; i < numBlanks; i++) {
-    
-            blanksAndSuccesses.push("_");
-
-            //Set the number of guesses to the length of the chosenSong plus 7.
-            numGuesses = chosenSong.length + parseInt(7);
+for (var i = 0; i < numBlanks; i++) {
+    blanksAndSuccesses.push("_");
     }
-}
+            //Set the number of guesses to the length of the chosenSong plus 7.
+            numGuesses = chosenSong.length + parseInt(7); 
+
 // Print the initial blanks in console.
     console.log(blanksAndSuccesses);
-
+    }
 //Prints the number of guesses
     console.log(numGuesses);
 
 // // It's where we will do all of the comparisons for matches.
 // // Again, it's not being called here. It's just being made for future use.
-// function checkLetters(letter) {
+//function checkLetters(letter) {
 
 // // This boolean will be toggled based on whether or not a user letter is found anywhere in the word.
 //     var letterInSong = false;
@@ -154,16 +150,15 @@ var gameSongTest = ["hey jude", "satisfaction", "darion", "lou", "greg", "jordan
 // // // Starts the Game by running the startGame() function
     startGame();
 
-//   // Start the prompt 
-//   // 
-//   prompt.start();
+  // Start the prompt 
+  prompt.start();
  
-//   // Get letter from the user. 
-//   prompt.get(letter, function (err, result) {
+  // Get letter from the user. 
+  prompt.get(letter, function (err, result) {
 
-//     // Log the results. 
-//     console.log('Letter guessed: ' + result.name);
-//   });
+    // Log the results. 
+    console.log('Letter guessed: ' + result.name);
+  });
 
 //   checkLetters(this.letter);
 
