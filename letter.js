@@ -6,7 +6,8 @@
 //var gameSong = songList.toLowerCase();
 var prompt = require('prompt');
 //Test array because array from word file is not working.
-var gameSongTest = ["hey jude", "satisfaction", "walk this way"];
+//var gameSongTest = ["hey jude", "satisfaction", "walk this way"];
+var songList = [];
 //Letter variable to be used with the prompt function.
  var letter = {
     properties: {
@@ -44,7 +45,7 @@ var gameSongTest = ["hey jude", "satisfaction", "walk this way"];
     numGuesses = 0;
 
 // Solution is chosen randomly from songList.
-    chosenSong = gameSongTest[Math.floor(Math.random() * gameSongTest.length)];
+    chosenSong = songList[Math.floor(Math.random() * songList.length)];
 // The song is broken into individual letters and spaces.
     lettersInChosenSong = chosenSong.split("");
 // We count the number of letters in the word.
