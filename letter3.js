@@ -6,7 +6,8 @@
 //var gameSong = songList.toLowerCase();
 var prompt = require('prompt');
 //Test array because array from word file is not working.
-var gameSongTest = ["hey jude", "satisfaction", "walk this way"];
+var gameSongTest = ["hey jude", "satisfaction", "darion", "lou", "greg", "jordan",
+ "jasmine", "stephen", "jacob", "adam", "rui", "luis"];
 //Letter variable to be used with the prompt function.
  var letter = {
     properties: {
@@ -72,12 +73,78 @@ for (var i = 0; i < numBlanks; i++) {
 //Prints the number of guesses
     console.log(numGuesses);
 
+// // It's where we will do all of the comparisons for matches.
+// // Again, it's not being called here. It's just being made for future use.
+//function checkLetters(letter) {
 
+// // This boolean will be toggled based on whether or not a user letter is found anywhere in the word.
+//     var letterInSong = false;
+
+//     // Check if a letter exists inside the array at all.
+//     for (var i = 0; i < numBlanks; i++) {
+ 
+//         if (chosenSong[i] === letter) {
+        
+//         // If the letter exists then toggle this boolean to true. This will be used in the next step.
+//         letterInSong = true;
+//     }
+//    }
+
+// // If the letter exists somewhere in the word, then figure out exactly where (which indices).
+// if (letterInSong) {
+
+//   // Loop through the word.
+// for (var j = 0; j < numBlanks; j++) {
+
+//    // Populate the blanksAndSuccesses with every instance of the letter.
+//   if (chosenSong[j] === letter) {
+
+//     // Here we set the specific space in blanks and letter equal to the letter when there is a match.
+//     blanksAndSuccesses[j] = letter;
+//      }
+//    }
+//   // Logging for testing.
+//    console.log(blanksAndSuccesses);
+//   }
+//   // If the letter doesn't exist at all...
+//   else {
+//     // ..then we add the letter to the list of wrong letters, and we subtract one of the guesses.
+//     wrongGuesses.push(letter);
+//      numGuesses--;
+//   }
+// }
+
+// //roundComplete() function
+// // // Here we will have all of the code that needs to be run after each guess is made
+
+// // function roundComplete() {
+
+// //     // First, log an initial status update in the console telling us how many wins, losses, and guesses are left.
+// //    console.log("WinCount: " + winCounter + " | LossCount: " + lossCounter + " | NumGuesses: " + numGuesses);
+
+// //    // If we have gotten all the letters to match the solution...
+// //   if (lettersInChosenWord.toString() === blanksAndSuccesses.toString()) {
+// // //     // ..add to the win counter & give the user an alert.
+// //     winCounter++;
+// //     console.log("You win!");
+
+// //    startGame();
+// //   }
+
+
+// // // If we've run out of guesses..
+// //    else if (numGuesses === 0) {
+// // // Add to the loss counter.
+// //   lossCounter++;
+// // // Give the user an alert.
+// //     console.log("You lose");
+// // // Restart the game.
+// //    startGame();
 // //   }
 // //  }
 
 
-// // // MAIN Function
+// // // MAIN PROCESS (THIS IS THE CODE THAT CONTROLS WHAT IS ACTUALLY RUN)
 // // // ==================================================================================================
 
 // // // Starts the Game by running the startGame() function
