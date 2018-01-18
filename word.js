@@ -36,10 +36,11 @@ function createSongList() {
    
       if (songList.length < 3) {
           songList.push(song);
-        console.log(song.favsong + " added to the Hangman game song list.");
+        
         
       }
       song.printInfo();
+      console.log(song.favsong + " added to the Hangman game song list.");
       // Runs the createSongList function again (recursion).
       createSongList();
       
